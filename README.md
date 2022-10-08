@@ -9,7 +9,7 @@ these packages are created by [ppkg](https://github.com/leleliu008/ppkg).
 **step1. create a docker container**
 ```
 docker run --rm --privileged multiarch/qemu-user-static --reset -p yes
-docker run --rm -it s390x/ubuntu bash
+docker run -it -w /root s390x/ubuntu bash
 ```
 
 **step2. install curl via system's package manager**
@@ -27,7 +27,7 @@ ppkg setup --use-system-package-manager
 ppkg update
 ```
 
-**install package via ppkg**
+**step4. install package via ppkg**
 ```
 ppkg install <PACKAGE-NAME>
 ```
